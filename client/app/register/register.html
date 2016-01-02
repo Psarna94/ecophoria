@@ -1,158 +1,177 @@
-<form class="container" name="participantForm" ng-submit="submitInfo(participant)">
+<div class="container">
+    <form class="container participant-form" name="participantForm" ng-submit="submitInfo(participant)">
 
 
-    <!--name input field begin-->
-    <div class="row">
-        <div class="row">
-            <input class="col-lg-4" type="text" name="name" placeholder="enter full name" ng-model="participant.name"
-                   ng-minlength="3"
-                   ng-maxlength="30" required/>
-        </div>
+        <!--name input field begin-->
+        <div class="row input-field row">
+            <label for="name">Full Name *</label>
 
-        <!--error handling for name-->
-        <div class="row">
-            <div class="col-lg-4" ng-show="participantForm.$submitted || participantForm.name.$touched">
-                <div ng-show="participantForm.name.$error.required">Your name is required</div>
-                <div ng-show="participantForm.name.$error.minlength">Enter a valid name</div>
-                <div ng-show="participantForm.name.$error.maxlength">Enter a valid name</div>
+            <div class="row">
+                <input class="col-lg-4" type="text" name="name" id="name" placeholder="enter full name"
+                       ng-model="participant.name"
+                       ng-minlength="3"
+                       ng-maxlength="30" required/>
+            </div>
+
+            <!--error handling for name-->
+            <div class="row">
+                <div class="col-lg-4" ng-show="participantForm.$submitted || participantForm.name.$touched">
+                    <div class="handle-error" ng-show="participantForm.name.$error.required">Your name is required</div>
+                    <div class="handle-error" ng-show="participantForm.name.$error.minlength">Enter a valid name</div>
+                    <div class="handle-error" ng-show="participantForm.name.$error.maxlength">Enter a valid name</div>
+                </div>
             </div>
         </div>
-    </div>
-    <!--name input field ends-->
+        <!--name input field ends-->
 
-    <!--age input field begin-->
-    <div class="row">
-        <div class="row">
-            <input class="col-lg-4" type="number" name="age" placeholder="enter age" ng-model="participant.age"
-                   required/>
-        </div>
-        <!--error handling for email-->
-        <div class="row">
-            <div class="col-lg-4" ng-show="participantForm.$submitted || participantForm.age.$touched">
-                <div ng-show="participantForm.age.$error.required">Your age is required</div>
+        <!--age input field begin-->
+        <div class=" row input-field">
+            <label for="age">Age*</label>
+
+            <div class="row">
+                <input id="age" class="col-lg-4" type="number" name="age" placeholder="enter age"
+                       ng-model="participant.age"
+                       required/>
+            </div>
+            <!--error handling for email-->
+            <div class="row">
+                <div class="col-lg-4" ng-show="participantForm.$submitted || participantForm.age.$touched">
+                    <div class="handle-error" ng-show="participantForm.age.$error.required">Your age is required</div>
+                </div>
             </div>
         </div>
-    </div>
-    <!--age input field ends-->
+        <!--age input field ends-->
 
-    <!--email input field begin-->
-    <div class="row">
-        <div class="row">
-            <input class="col-lg-4" type="email" name="email" placeholder="enter email" ng-model="participant.email"
-                   required/>
-        </div>
-        <!--error handling for email-->
-        <div class="row">
-            <div class="col-lg-4" ng-show="participantForm.$submitted || participantForm.email.$touched">
-                <div ng-show="participantForm.email.$error.required">Your email is required</div>
+        <!--email input field begin-->
+        <div class="row input-field">
+            <label for="email">Email *</label>
+
+            <div class="row">
+                <input id="email" class="col-lg-4" type="email" name="email" placeholder="enter email"
+                       ng-model="participant.email"
+                       required/>
+            </div>
+            <!--error handling for email-->
+            <div class="row">
+                <div class="col-lg-4" ng-show="participantForm.$submitted || participantForm.email.$touched">
+                    <div class="handle-error" ng-show="participantForm.email.$error.required">Your email is required</div>
+                </div>
             </div>
         </div>
-    </div>
-    <!--email input field ends-->
+        <!--email input field ends-->
 
-    <!--phone input field begin-->
-    <div class="row">
-        <div class="row">
-            <input class="col-lg-4" type="text" name="phone" placeholder="enter phone" ng-model="participant.phone"
-                   required/>
-        </div>
-        <!--error handling for phone-->
-        <div class="row">
-            <div class="col-lg-4" ng-show="participantForm.$submitted || participantForm.phone.$touched">
-                <div ng-show="participantForm.phone.$error.required">Your phone is required</div>
+        <!--phone input field begin-->
+        <div class="row input-field">
+            <label for="phone">Phone *</label>
+
+            <div class="row">
+                <input id="phone" class="col-lg-4" type="text" name="phone" placeholder="enter phone"
+                       ng-model="participant.phone"
+                       required/>
+            </div>
+            <!--error handling for phone-->
+            <div class="row">
+                <div class="col-lg-4" ng-show="participantForm.$submitted || participantForm.phone.$touched">
+                    <div class="handle-error" ng-show="participantForm.phone.$error.required">Your phone is required</div>
+                </div>
             </div>
         </div>
-    </div>
-    <!--phone input field ends-->
+        <!--phone input field ends-->
 
 
-    <!--college-name input field begins-->
-    <div class="row">
-        <div class="row">
-            <input class="col-lg-2" type="text" name="college" placeholder="enter college"
-                   ng-model="participant.college"
-                   ng-minlength="2"
-                   ng-maxlength="30"
-                   required/>
-        </div>
-        <!--error handling for age-->
-        <div class="row">
-            <div class="col-lg-4" ng-show="participantForm.$submitted || participantForm.college.$touched">
-                <div ng-show="participantForm.college.$error.required">Your college is required</div>
-                <div ng-show="participantForm.college.$error.minlength">Enter a valid name</div>
-                <div ng-show="participantForm.college.$error.maxlength">Enter a valid name</div>
+        <!--college-name input field begins-->
+        <div class="row input-field">
+            <label for="college">College *</label>
+
+            <div class="row">
+                <input id="college" class="col-lg-2" type="text" name="college" placeholder="enter college"
+                       ng-model="participant.college"
+                       ng-minlength="2"
+                       ng-maxlength="30"
+                       required/>
+            </div>
+            <!--error handling for college-->
+            <div class="row">
+                <div class="col-lg-4" ng-show="participantForm.$submitted || participantForm.college.$touched">
+                    <div class="handle-error" ng-show="participantForm.college.$error.required">Your college is required</div>
+                    <div class="handle-error" ng-show="participantForm.college.$error.minlength">Enter a valid name</div>
+                    <div class="handle-error" ng-show="participantForm.college.$error.maxlength">Enter a valid name</div>
+                </div>
             </div>
         </div>
-    </div>
-    <!--college name input field ends-->
+        <!--college name input field ends-->
 
-    <!--course input field begins-->
-    <div class="row">
-        <div class="row">
-            <input class="col-lg-2" type="text" name="course" placeholder="enter course"
-                   ng-model="participant.course"
-                   ng-minlength="2"
-                   ng-maxlength="30"
-                   required/>
-        </div>
-        <!--error handling for age-->
-        <div class="row">
-            <div class="col-lg-4" ng-show="participantForm.$submitted || participantForm.course.$touched">
-                <div ng-show="participantForm.course.$error.required">Your course is required</div>
-                <div ng-show="participantForm.course.$error.minlength">Enter a valid name</div>
-                <div ng-show="participantForm.course.$error.maxlength">Enter a valid name</div>
+        <!--course input field begins-->
+        <div class="row input-field">
+            <label for="course">Course *</label>
+
+            <div class="row">
+                <input id="course" class="col-lg-2" type="text" name="course" placeholder="enter course"
+                       ng-model="participant.course"
+                       ng-minlength="2"
+                       ng-maxlength="30"
+                       required/>
+            </div>
+            <!--error handling for age-->
+            <div class="row">
+                <div class="col-lg-4" ng-show="participantForm.$submitted || participantForm.course.$touched">
+                    <div class="handle-error" ng-show="participantForm.course.$error.required">Your course is required</div>
+                    <div class="handle-error" ng-show="participantForm.course.$error.minlength">Enter a valid name</div>
+                    <div class="handle-error" ng-show="participantForm.course.$error.maxlength">Enter a valid name</div>
+                </div>
             </div>
         </div>
-    </div>
-    <!--course input field ends-->
+        <!--course input field ends-->
 
-    <!--academic-year list begins-->
-    <div class="row">
-        <div class="row">
-            <select class="col-lg-4" name="year" ng-model="participant.academic_year" required="true">
-                <option value="1">1st</option>
-                <option value="2">2nd</option>
-                <option value="3">3rd</option>
-                <option value="4">4th</option>
-                <option value="5">5th</option>
-            </select>
-        </div>
+        <!--academic-year list begins-->
+        <div class="row input-field">
+            <div class="row">
+                <select class="col-lg-4" name="year" ng-model="participant.academic_year" required="true">
+                    <option value="">Please select your year of study</option>
+                    <option value="1">1st</option>
+                    <option value="2">2nd</option>
+                    <option value="3">3rd</option>
+                    <option value="4">4th</option>
+                    <option value="5">5th</option>
+                </select>
+            </div>
 
-        <!--error handling for academic-year-->
-        <div class="row">
-            <div class="col-lg-4" ng-show="participantForm.$submitted || participantForm.year.touched">
-                <div ng-show="participantForm.year.$error.required"> year of study is needed</div>
+            <!--error handling for academic-year-->
+            <div class="row">
+                <div class="col-lg-4" ng-show="participantForm.$submitted || participantForm.year.touched">
+                    <div class="handle-error" ng-show="participantForm.year.$error.required"> year of study is needed</div>
+                </div>
             </div>
         </div>
-    </div>
-    <!--academic-year list ends-->
+        <!--academic-year list ends-->
 
 
-    <!--event-names list begin-->
-    <div class="row">
-        <div class="row">
-            <select class="col-lg-4" name="events" ng-model="participant.event" required="true">
-                <option value="Monopoly">Monopoly</option>
-                <option value="Monopoly">Monopoly</option>
-                <option value="Monopoly">Monopoly</option>
-                <option value="Monopoly">Monopoly</option>
-                <option value="Monopoly">Monopoly</option>
-                <option value="Monopoly">Monopoly</option>
-                <option value="Monopoly">Monopoly</option>
-                <option value="Monopoly">Monopoly</option>
-                <option value="Monopoly">Monopoly</option>
-            </select>
-        </div>
-        <!--error handling for events-->
-        <div class="row">
-            <div class="col-lg-4" ng-show="participantForm.$submitted || participantForm.events.touched">
-                <div ng-show="participantForm.events.$error.required"> an event is needed</div>
+        <!--event-names list begin-->
+        <div class="row input-field">
+            <div class="row">
+                <select class="col-lg-4" name="events" ng-model="participant.event" required="true">
+                    <option value="">Please select event</option>
+                    <option value="Monopoly">Monopoly</option>
+                    <option value="Monopoly">Monopoly</option>
+                    <option value="Monopoly">Monopoly</option>
+                    <option value="Monopoly">Monopoly</option>
+                    <option value="Monopoly">Monopoly</option>
+                    <option value="Monopoly">Monopoly</option>
+                    <option value="Monopoly">Monopoly</option>
+                    <option value="Monopoly">Monopoly</option>
+                    <option value="Monopoly">Monopoly</option>
+                </select>
+            </div>
+            <!--error handling for events-->
+            <div class="row">
+                <div class="col-lg-4" ng-show="participantForm.$submitted || participantForm.events.touched">
+                    <div class="handle-error" ng-show="participantForm.events.$error.required"> an event is needed</div>
+                </div>
             </div>
         </div>
-    </div>
-    <!--events list ends-->
+        <!--events list ends-->
 
-    <button type="submit" ng-disabled="participantForm.name.$error.required ||
+        <button type="submit" ng-disabled="participantForm.name.$error.required ||
                                         participantForm.name.$error.minlength ||
                                         participantForm.name.$error.maxlength ||
                                         participantForm.age.$error.required ||
@@ -170,8 +189,9 @@
                                         participantForm.course.$error.maxlength ||
                                         participantForm.year.$error.required ||
                                         participantForm.events.$error.required">
-        Submit
-    </button>
+            Submit
+        </button>
 
-    <button type="submit"> Submit</button>
-</form>
+        <button type="submit"> Submit</button>
+    </form>
+</div>
