@@ -25,3 +25,23 @@
 .navbar-text {
   margin-left: 15px;
 }
+
+.landing{
+  position: absolute;
+  height:100%;
+  width: 100%;
+  background-color: greenyellow;
+}
+
+.events{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top:100%;
+  left:0;
+  background-color: tomato;
+}
+
+.college-name{
+  text-align: center;
+}

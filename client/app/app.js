@@ -8,8 +8,7 @@ angular.module('ecophoriaApp', [
     'ngResource',
     'ngSanitize',
     'ui.router',
-    'ui.bootstrap',
-    'ngMessages',
+
     'validation.match'
 ])
     .config(function ($urlRouterProvider, $locationProvider) {
