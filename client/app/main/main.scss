@@ -101,51 +101,118 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c8e2f2', endColorstr='#b9d3e2', GradientType=0);
 }
 
-.honey-comb{
+.honey-comb {
   position: fixed;
-  width:10000px;
-  left:-10px;
+  width: 10000PX;
+  left: -10px;
 }
 
 .hex {
-    float:left;
-    margin-right: -10px;
-    margin-bottom: -20px;
-}
-.hex .left {
-    float: left;
-    width: 0;
-    border-right: 15px solid #247EBC;
-    border-top: 25.95px solid transparent;
-    border-bottom: 25.95px solid transparent;
-}
-.hex .middle {
-    float: left;
-    width: 30px;
-    height: 51.9px;
-    background: #247EBC;
-}
-.hex .right {
-    float: left;
-    width: 0;
-    border-left: 15px solid #247EBC;
-    border-top: 25.95px solid transparent;
-    border-bottom: 25.95px solid transparent;
-}
-.hex-row {
-    clear: left;
+  float: left;
+  margin-right: -10px;
+  margin-bottom: -20px;
 }
 
-.hex-row-transparent{
+.hex-light {
+  @extend .hex;
+}
+
+.hex-dark {
+  @extend .hex;
+}
+
+.hex .left {
+  float: left;
+  width: 0;
+  border-right: 15px solid #247EBC;
+  border-top: 25.95px solid transparent;
+  border-bottom: 25.95px solid transparent;
+}
+
+.hex-light .left {
+  float: left;
+  width: 0;
+  border-top: 25.95px solid transparent;
+  border-bottom: 25.95px solid transparent;
+  border-right: 15px solid #9BD7FF;
+}
+
+.hex-dark .left {
+  float: left;
+  width: 0;
+  border-top: 25.95px solid transparent;
+  border-bottom: 25.95px solid transparent;
+  border-right: 15px solid #144B71;
+}
+
+.hex .middle {
+  float: left;
+  width: 30px;
+  height: 51.9px;
+  background: #247EBC;
+}
+
+.hex-light .middle {
+  float: left;
+  width: 30px;
+  height: 51.9px;
+  background: #9BD7FF;
+}
+
+.hex-dark .middle {
+  float: left;
+  width: 30px;
+  height: 51.9px;
+  background: #144B71;
+}
+
+.hex .right {
+  float: left;
+  width: 0;
+  border-left: 15px solid #247EBC;
+  border-top: 25.95px solid transparent;
+  border-bottom: 25.95px solid transparent;
+}
+
+.hex-light .right {
+  float: left;
+  width: 0;
+  border-left: 15px solid #9BD7FF;
+  border-top: 25.95px solid transparent;
+  border-bottom: 25.95px solid transparent;
+}
+
+.hex-dark .right {
+  float: left;
+  width: 0;
+  border-left: 15px solid #144B71;
+  border-top: 25.95px solid transparent;
+  border-bottom: 25.95px solid transparent;
+}
+
+.hex-row {
+  clear: left;
+}
+
+.hex-row-transparent {
   @extend .hex-row;
   visibility: hidden;
 }
 
-.hex-transparent{
+.hex-transparent {
   @extend .hex;
   visibility: hidden;
 }
+
 .hex.even {
-    margin-top: 26px;
+  margin-top: 26px;
+}
+
+.hex-light .even {
+  margin-top: 26px;
+}
+
+.hex-dark .even {
+  margin-top: 26px;
 }
 
