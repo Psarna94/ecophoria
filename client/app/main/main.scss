@@ -41,17 +41,9 @@
 
 }
 
-.events {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 100%;
-  left: 0;
-  background-color: tomato;
-}
-
 .college-name {
   text-align: center;
+  z-index: 100;
 }
 
 .register-button {
@@ -59,15 +51,15 @@
   border-radius: 22px 22px 22px 22px;
   -moz-border-radius: 22px 22px 22px 22px;
   -webkit-border-radius: 22px 22px 22px 22px;
-  border: 0px solid #000000;
-  -webkit-box-shadow: 3px 4px 21px 0px rgba(57, 57, 57, 0.37);
-  -moz-box-shadow: 3px 4px 21px 0px rgba(57, 57, 57, 0.37);
-  box-shadow: 3px 4px 21px 0px rgba(57, 57, 57, 0.37);
+  border: 0px solid #266491;
+  -webkit-box-shadow: 0px 4px 0px 0px #20577D;
+  -moz-box-shadow: 0px 4px 0px 0px #20577D;
+  box-shadow: 0px 4px 0px 0px #20577D;
   font-weight: normal;
   font-size: 20px;
   color: #FFFFFF;
   background: rgba(43, 114, 161, 1);
-  background: -moz-linear-gradient(top, rgba(43, 114, 161, 1) 0%, rgba(43, 114, 161, 1) 48%, rgba(38, 100, 145, 1) 49%, rgba(38, 100, 145, 1) 100%);
+  background: -moz-linear-gradient(top, rgba(43, 114, 161, 1) 0%, rgba(43, 114, 161, 1) 48%, rgba(38, 100, 145, 1) 49%, rgb(38, 100, 145) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(43, 114, 161, 1)), color-stop(48%, rgba(43, 114, 161, 1)), color-stop(49%, rgba(38, 100, 145, 1)), color-stop(100%, rgba(38, 100, 145, 1)));
   background: -webkit-linear-gradient(top, rgba(43, 114, 161, 1) 0%, rgba(43, 114, 161, 1) 48%, rgba(38, 100, 145, 1) 49%, rgba(38, 100, 145, 1) 100%);
   background: -o-linear-gradient(top, rgba(43, 114, 161, 1) 0%, rgba(43, 114, 161, 1) 48%, rgba(38, 100, 145, 1) 49%, rgba(38, 100, 145, 1) 100%);
@@ -76,16 +68,23 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2b72a1', endColorstr='#266491', GradientType=0);
   height: 50px;
   outline: none;
+  transition: 1s;
+}
+
+.register-button:hover {
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
 }
 
 .event-button {
   border-radius: 22px 22px 22px 22px;
   -moz-border-radius: 22px 22px 22px 22px;
   -webkit-border-radius: 22px 22px 22px 22px;
-  border: 0px solid #000000;
-  -webkit-box-shadow: 3px 4px 21px 0px rgba(57, 57, 57, 0.37);
-  -moz-box-shadow: 3px 4px 21px 0px rgba(57, 57, 57, 0.37);
-  box-shadow: 3px 4px 21px 0px rgba(57, 57, 57, 0.37);
+  border: 0px solid #9AB0BC;
+  -webkit-box-shadow: 0px 4px 0px 0px #9AB0BC;
+  -moz-box-shadow: 0px 4px 0px 0px #9AB0BC;
+  box-shadow: 0px 4px 0px 0px #9AB0BC;
   font-weight: normal;
   font-size: 20px;
   color: #2D709D;
@@ -105,6 +104,14 @@
   position: fixed;
   width: 10000PX;
   left: -10px;
+  background: rgba(255, 255, 255, 1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(242, 252, 252, 1) 83%, rgba(232, 254, 255, 1) 90%, rgba(252, 254, 255, 1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(83%, rgba(242, 252, 252, 1)), color-stop(90%, rgba(232, 254, 255, 1)), color-stop(100%, rgba(252, 254, 255, 1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(242, 252, 252, 1) 83%, rgba(232, 254, 255, 1) 90%, rgba(252, 254, 255, 1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(242, 252, 252, 1) 83%, rgba(232, 254, 255, 1) 90%, rgba(252, 254, 255, 1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(242, 252, 252, 1) 83%, rgba(232, 254, 255, 1) 90%, rgba(252, 254, 255, 1) 100%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(242, 252, 252, 1) 83%, rgba(232, 254, 255, 1) 90%, rgba(252, 254, 255, 1) 100%);
+
 }
 
 .hex {
@@ -240,12 +247,12 @@
   animation-name: fade-out;
   animation-duration: 4s;
   animation-iteration-count: infinite;
-  animation-delay: 5s;
+  animation-delay: 2s;
   -webkit-animation-delay: 5s;
   animation-direction: alternate;
 }
 
-.hex-animation3{
+.hex-animation3 {
   animation-name: fade-out;
   animation-duration: 7s;
   animation-iteration-count: infinite;
@@ -254,3 +261,24 @@
   animation-direction: alternate;
 }
 
+.events {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  background-color: rgba(245, 250, 254, 0);
+
+}
+
+.event-card {
+  height: 256px;
+  -webkit-box-shadow: 0px 4px 0px 0px #9AB0BC;
+  -moz-box-shadow: 0px 4px 0px 0px #9AB0BC;
+  box-shadow: 0px 4px 0px 0px #9AB0BC;
+  border-radius: 16px;
+  background-color: white;
+  opacity: 1;
+  border: 2px solid #9AB0BC;
+  margin-top:30px;
+}
