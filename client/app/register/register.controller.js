@@ -4,6 +4,8 @@ angular.module('ecophoriaApp')
     .controller('RegisterCtrl', function ($scope, $http) {
 
         $scope.submitInfo = function (participant) {
+            participant.event = [];
+            participant.event.push($scope.event);
             $http.post('/api/participants', participant)
                 .success(function (res) {
                     console.log(res);

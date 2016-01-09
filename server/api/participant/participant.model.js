@@ -3,42 +3,41 @@
 var mongoose = require('bluebird').promisifyAll(require('mongoose'));
 
 var ParticipantSchema = new mongoose.Schema({
-    name: {
+    name:          {
         type:     String,
         required: true
     },
-    age:              {
+    age:           {
         type:     Number,
         required: true
     },
-    email:            {
+    email:         {
         type:     String,
         required: true
     },
-    phone:            {
+    phone:         {
         type:     Number,
         required: true
     },
-    college:          {
+    college:       {
         type:     String,
         required: true
     },
-    course:           {
+    course:        {
         type:     String,
         required: true
     },
-    academic_year:    {
+    academic_year: {
         type:     String,
         required: true
     },
-    event:            {
-        type:     [String],
-        required: true,
-        team:     Boolean
-    },
-    participants:     {
-        type: [String]
-    }
+    event:         [
+        {
+            name:String,
+            team:[String]
+        }
+    ]
+
 });
 
 export default mongoose.model('Participant', ParticipantSchema);

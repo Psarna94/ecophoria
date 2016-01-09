@@ -78,7 +78,7 @@ export function show(req, res) {
 export function create(req, res) {
     var email = req.body.email;
     var phone = req.body.phone;
-    var event = req.body.event;
+    var eventName = req.body.event[0].name;
     console.log(email);
     Participant.find({
         email: req.body.email
@@ -95,17 +95,28 @@ export function create(req, res) {
         }
         if(participant.length != 0){
             if(participant[0].email == email) {
-                if (participant[0].event.indexOf(event) > -1) {
-                    res.send("You have already registered for this event");
-                } else {
-                    participant[0].event.push(event);
-                    participant[0].save(function(err, newParticipant){
-                        if(err){
-                            return handleError(res, err);
-                        }
-                        return res.status(200).json(newParticipant);
-                    })
+                for(var i=0; i<participant[0].event.length; i++){
+                    if(participant[0].event[i].name === eventName){
+                        var foo = true;
+                        break;
+                    }else{
+                        var foo = false;
+                    }
+
+
                 }
+                if(foo){
+                        res.send("You have already registered for this event");
+                    }else{
+                    participant[0].event.push(req.body.event[0]);
+                        participant[0].save(function(err, newParticipant){
+                            if(err){
+                                return handleError(res);
+                            }
+                            return res.status(200).json(newParticipant)
+                        })
+                }
+
 
             }else{
                 Participant.createAsync(req.body)
