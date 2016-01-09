@@ -74,6 +74,7 @@ export function show(req, res) {
     .catch(handleError(res));
 }
 
+
 // Creates a new Participant in the DB
 export function create(req, res) {
   Participant.createAsync(req.body)
