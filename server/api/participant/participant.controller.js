@@ -77,6 +77,7 @@ export function show(req, res) {
 
 // Creates a new Participant in the DB
 export function create(req, res) {
+    Participant.find
   Participant.createAsync(req.body)
     .then(responseWithResult(res, 201))
     .catch(handleError(res));
