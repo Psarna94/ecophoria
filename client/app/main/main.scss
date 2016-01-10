@@ -291,12 +291,23 @@
 }
 
 .sponsors{
-  height: 75%;
+  height: 50%;
   width: 100%;
-  background-color: white;
+  background-color: transparent;
   margin-top: 50px;
 }
 
 .sponsor-image{
   margin-bottom: 30px;
+}
+
+.contact{
+  height: 50%;
+  width:100%;
+  background-color: #144B71;
+  bottom: 0%;
+}
+
+.glyphicon{
+  font-size: 20px;
 }
