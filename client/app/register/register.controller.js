@@ -1,28 +1,66 @@
 'use strict';
 
 angular.module('ecophoriaApp')
-    .controller('RegisterCtrl', function ($scope, $http) {
-
+    .controller('RegisterCtrl', function ($scope, $http, $state) {
+        $scope.event = {};
+        $scope.event.team = [];
         $scope.submitInfo = function (participant) {
+
             participant.event = [];
             participant.event.push($scope.event);
             $http.post('/api/participants', participant)
                 .success(function (res) {
                     console.log(res);
+                    $state.go('success');
                 })
                 .error(function (res) {
+                    if(res ==="You have already registered for this event"){
+                        $scope.registeredAlready = true;
+                    }
                     console.log(res);
                 })
         }
 
+        $scope.addTeamMember1 = function () {
+            $scope.event.team.push($scope.member1);
+            console.log($scope.event);
+        }
+
+        $scope.addTeamMember2 = function () {
+            $scope.event.team.push($scope.member2);
+            console.log($scope.event);
+        }
+
+        $scope.addTeamMember3 = function () {
+            $scope.event.team.push($scope.member3);
+        }
+
+        $scope.addTeamMember4 = function () {
+            $scope.event.team.push($scope.member4);
+        }
+
         $scope.eventSelected = function () {
-            console.log($scope.participant.event);
-            if ($scope.participant.event === "B-plan" || $scope.participant.event === "The winning Move" || $scope.participant.event === "Quiz Pro Quo" || $scope.participant.event === "Posterize") {
+            console.log($scope.event.name);
+            if ($scope.event.name === "B-plan" || $scope.event.name === "The winning Move" || $scope.event.name === "Quiz Pro Quo" || $scope.event.name === "Posterize") {
                 $scope.show2 = true;
                 $scope.loneWolf = false;
-            }else if($scope.participant.event === "The credible" || $scope.participant.event ==="Minute to win it" || $scope.participant.event==="Shock the Stocks"){
+                $scope.show3 = false;
+                $scope.show4 = false;
+            } else if ($scope.event.name === "The credible" || $scope.event.name === "Minute to win it" || $scope.event.name === "Shock the Stocks") {
                 $scope.loneWolf = true;
                 $scope.show2 = false;
+                $scope.show3 = false;
+                $scope.show4 = false;
+            } else if ($scope.event.name === "Connectonomics") {
+                $scope.loneWolf = false;
+                $scope.show2 = false;
+                $scope.show3 = true;
+                $scope.show4 = false;
+            } else if ($scope.event.name === "The templar treasure") {
+                $scope.show4 = true;
+                $scope.loneWolf = false;
+                $scope.show2 = false;
+                $scope.show3 = false;
             }
         }
 
@@ -92,4 +130,12 @@ angular.module('ecophoriaApp')
             }
         ];
 
+
+
+        // This is just so you can see the array values changing and working! Check your console as you're typing in the inputs :)
+        $scope.$watch('event.team', function (value) {
+            console.log(value);
+        }, true);
+
     });
+

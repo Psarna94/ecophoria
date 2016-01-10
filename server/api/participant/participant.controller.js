@@ -91,7 +91,6 @@ export function create(req, res) {
             Participant.createAsync(req.body)
                 .then(responseWithResult(res, 201))
                 .catch(handleError(res));
-                console.log('uppar vaal if');
         }
         if(participant.length != 0){
             if(participant[0].email == email) {
@@ -106,7 +105,7 @@ export function create(req, res) {
 
                 }
                 if(foo){
-                        res.send("You have already registered for this event");
+                        res.status(500).send("You have already registered for this event");
                     }else{
                     participant[0].event.push(req.body.event[0]);
                         participant[0].save(function(err, newParticipant){
