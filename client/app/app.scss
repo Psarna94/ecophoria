@@ -30,7 +30,9 @@ html, body{
 
 // Component styles are injected through grunt
 // injector
+@import 'Allevents/Allevents.scss';
 @import 'admin/admin.scss';
+@import 'events/events.scss';
 @import 'main/main.scss';
 @import 'participants/participants.scss';
 @import 'register/register.scss';
