@@ -1,44 +1,56 @@
 <h3>Participants in B-Plan</h3>
 <div ng-repeat="participant in participants">
-    <div ng-if="participant.event.indexOf('B-plan') > -1">{{participant.name}}</div>
+    <div ng-repeat="event in participant.event">
+        <div ng-if="event.name === 'B-plan' ">{{participant.name}}</div>
+    </div>
 </div>
 
 <h3>Participants in The credible</h3>
 <div ng-repeat="participant in participants">
-    <div ng-if="participant.event.indexOf('The Credible') > -1">{{participant.name}}</div>
+    <div ng-repeat="event in participant.event">
+        <div ng-if="event.name === 'The Credible' ">{{participant.name}}</div>
+    </div>
 </div>
 
 <h3>Participants in The winning move</h3>
 <div ng-repeat="participant in participants">
-    <div ng-if="participant.event.indexOf('The winning move') > -1">{{participant.name}}</div>
+    <div ng-repeat="event in participant.event">
+        <div ng-if="event.name === 'Monompoly' ">{{participant.name}}</div>
+    </div>
 </div>
 
 <h3>Participants in Quiz Pro Quo</h3>
 <div ng-repeat="participant in participants">
-    <div ng-if="participant.event.indexOf('Quiz pro quo') > -1">{{participant.name}}</div>
+    <div ng-repeat="event in participant.event">
+        <div ng-if="event.name === 'Quiz pro quo' ">{{participant.name}}</div>
+    </div>
 </div>
 
 <h3>Participants in Connectonomics</h3>
 <div ng-repeat="participant in participants">
-    <div ng-if="participant.event.indexOf('Connectonomics') > -1">{{participant.name}}</div>
+    <div ng-repeat="event in participant.event">
+        <div ng-if="event.name === 'Connectonomics' ">{{participant.name}}</div>
+    </div>
 </div>
 
 <h3>Participants in The Templar Treasure</h3>
 <div ng-repeat="participant in participants">
-    <div ng-if="participant.event.indexOf('The templar treasure') > -1">{{participant.name}}</div>
+    <div ng-repeat="event in participant.event">
+        <div ng-if="event.name === 'Clued Inn' ">{{participant.name}}</div>
+    </div>
 </div>
 
 <h3>Participants in Posterize</h3>
 <div ng-repeat="participant in participants">
-    <div ng-if="participant.event.indexOf('Posterize') > -1">{{participant.name}}</div>
+    <div ng-repeat="event in participant.event">
+        <div ng-if="event.name === 'Posterize' ">{{participant.name}}</div>
+    </div>
 </div>
 
 <h3>Participants in Minute To Win it</h3>
 <div ng-repeat="participant in participants">
-    <div ng-if="participant.event.indexOf('Minute to win it') > -1">{{participant.name}}</div>
+    <div ng-repeat="event in participant.event">
+        <div ng-if="event.name === 'Minute to win it' ">{{participant.name}}</div>
+    </div>
 </div>
 
-<h3>Participants in Shock the stocks</h3>
-<div ng-repeat="participant in participants">
-    <div ng-if="participant.event.indexOf('Shock the stocks') > -1">{{participant.name}}</div>
-</div>
