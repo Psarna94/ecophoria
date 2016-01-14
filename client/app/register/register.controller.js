@@ -41,7 +41,7 @@ angular.module('ecophoriaApp')
 
         $scope.eventSelected = function () {
             console.log($scope.event.name);
-            if ($scope.event.name === "B-plan" || $scope.event.name === "The winning Move" || $scope.event.name === "Quiz Pro Quo" || $scope.event.name === "Posterize") {
+            if ($scope.event.name === "Startup Challenge" || $scope.event.name === "Monopoly" || $scope.event.name === "Quiz Pro Quo" || $scope.event.name === "Posterize") {
                 $scope.show2 = true;
                 $scope.loneWolf = false;
                 $scope.show3 = false;
@@ -56,7 +56,7 @@ angular.module('ecophoriaApp')
                 $scope.show2 = false;
                 $scope.show3 = true;
                 $scope.show4 = false;
-            } else if ($scope.event.name === "The templar treasure") {
+            } else if ($scope.event.name === "Clued Inn") {
                 $scope.show4 = true;
                 $scope.loneWolf = false;
                 $scope.show2 = false;
@@ -66,7 +66,7 @@ angular.module('ecophoriaApp')
 
         $scope.events = [
             {
-                name:         "B-plan",
+                name:         "Startup Challenge",
                 desc:         "A shout-out to all the entrepreneurs. Time for the B-word.",
                 participants: 2,
                 duration:     1.5,
