@@ -1,56 +1,133 @@
-<h3>Participants in B-Plan</h3>
-<div ng-repeat="participant in participants">
-    <div ng-repeat="event in participant.event">
-        <div ng-if="event.name === 'B-plan' ">{{participant.name}}</div>
-    </div>
-</div>
+<div class="container">
 
-<h3>Participants in The credible</h3>
-<div ng-repeat="participant in participants">
-    <div ng-repeat="event in participant.event">
-        <div ng-if="event.name === 'The Credible' ">{{participant.name}}</div>
-    </div>
-</div>
+    <h3>Participants in Startup Challenge</h3>
 
-<h3>Participants in The winning move</h3>
-<div ng-repeat="participant in participants">
-    <div ng-repeat="event in participant.event">
-        <div ng-if="event.name === 'Monompoly' ">{{participant.name}}</div>
+    <div ng-repeat="participant in participants">
+        <div ng-repeat="event in participant.event">
+            <div class="participant-info" ng-if="event.name === 'Startup Challenge' ">
+                <div>Name: {{participant.name}}</div>
+                <div>Email: {{participant.email}}</div>
+                <div>Phone: {{participant.phone}}</div>
+                <div>College: {{participant.college}}</div>
+                <div>Course: {{participant.course}}</div>
+                <div>Year: {{participant.academic_year}}</div>
+                <div>Team: {{event.team}}</div>
+            </div>
+        </div>
     </div>
-</div>
 
-<h3>Participants in Quiz Pro Quo</h3>
-<div ng-repeat="participant in participants">
-    <div ng-repeat="event in participant.event">
-        <div ng-if="event.name === 'Quiz pro quo' ">{{participant.name}}</div>
-    </div>
-</div>
 
-<h3>Participants in Connectonomics</h3>
-<div ng-repeat="participant in participants">
-    <div ng-repeat="event in participant.event">
-        <div ng-if="event.name === 'Connectonomics' ">{{participant.name}}</div>
-    </div>
-</div>
+    <h3>Participants in The credible</h3>
 
-<h3>Participants in The Templar Treasure</h3>
-<div ng-repeat="participant in participants">
-    <div ng-repeat="event in participant.event">
-        <div ng-if="event.name === 'Clued Inn' ">{{participant.name}}</div>
+    <div ng-repeat="participant in participants">
+        <div ng-repeat="event in participant.event">
+            <div class="participant-info" ng-if="event.name === 'The credible' ">
+                <div>Name: {{participant.name}}</div>
+                <div>Email: {{participant.email}}</div>
+                <div>Phone: {{participant.phone}}</div>
+                <div>College: {{participant.college}}</div>
+                <div>Course: {{participant.course}}</div>
+                <div>Year: {{participant.academic_year}}</div>
+                <div>Team: {{event.team}}</div>
+            </div>
+        </div>
     </div>
-</div>
 
-<h3>Participants in Posterize</h3>
-<div ng-repeat="participant in participants">
-    <div ng-repeat="event in participant.event">
-        <div ng-if="event.name === 'Posterize' ">{{participant.name}}</div>
+    <h3>Participants in Monopoly</h3>
+    <div ng-repeat="participant in participants">
+        <div ng-repeat="event in participant.event">
+            <div class="participant-info" ng-if="event.name === 'Monopoly' ">
+                <div>Name: {{participant.name}}</div>
+                <div>Email: {{participant.email}}</div>
+                <div>Phone: {{participant.phone}}</div>
+                <div>College: {{participant.college}}</div>
+                <div>Course: {{participant.course}}</div>
+                <div>Year: {{participant.academic_year}}</div>
+                <div>Team: {{event.team}}</div>
+            </div>
+        </div>
     </div>
-</div>
 
-<h3>Participants in Minute To Win it</h3>
-<div ng-repeat="participant in participants">
-    <div ng-repeat="event in participant.event">
-        <div ng-if="event.name === 'Minute to win it' ">{{participant.name}}</div>
+
+    <h3>Participants in Quiz Pro Quo</h3>
+
+     <div ng-repeat="participant in participants">
+        <div ng-repeat="event in participant.event">
+            <div class="participant-info" ng-if="event.name === 'Quiz pro Quo' ">
+                <div>Name: {{participant.name}}</div>
+                <div>Email: {{participant.email}}</div>
+                <div>Phone: {{participant.phone}}</div>
+                <div>College: {{participant.college}}</div>
+                <div>Course: {{participant.course}}</div>
+                <div>Year: {{participant.academic_year}}</div>
+                <div>Team: {{event.team}}</div>
+            </div>
+        </div>
     </div>
+
+    <h3>Participants in Connectonomics</h3>
+
+     <div ng-repeat="participant in participants">
+        <div ng-repeat="event in participant.event">
+            <div class="participant-info" ng-if="event.name === 'Connectonomics' ">
+                <div>Name: {{participant.name}}</div>
+                <div>Email: {{participant.email}}</div>
+                <div>Phone: {{participant.phone}}</div>
+                <div>College: {{participant.college}}</div>
+                <div>Course: {{participant.course}}</div>
+                <div>Year: {{participant.academic_year}}</div>
+                <div>Team: {{event.team}}</div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Participants in Clued Inn</h3>
+
+     <div ng-repeat="participant in participants">
+        <div ng-repeat="event in participant.event">
+            <div class="participant-info" ng-if="event.name === 'Clued Inn' ">
+                <div>Name: {{participant.name}}</div>
+                <div>Email: {{participant.email}}</div>
+                <div>Phone: {{participant.phone}}</div>
+                <div>College: {{participant.college}}</div>
+                <div>Course: {{participant.course}}</div>
+                <div>Year: {{participant.academic_year}}</div>
+                <div>Team: {{event.team}}</div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Participants in Posterize</h3>
+
+     <div ng-repeat="participant in participants">
+        <div ng-repeat="event in participant.event">
+            <div class="participant-info" ng-if="event.name === 'Posterize' ">
+                <div>Name: {{participant.name}}</div>
+                <div>Email: {{participant.email}}</div>
+                <div>Phone: {{participant.phone}}</div>
+                <div>College: {{participant.college}}</div>
+                <div>Course: {{participant.course}}</div>
+                <div>Year: {{participant.academic_year}}</div>
+                <div>Team: {{event.team}}</div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Participants in Minute To Win it</h3>
+
+    <div ng-repeat="participant in participants">
+        <div ng-repeat="event in participant.event">
+            <div class="participant-info" ng-if="event.name === 'Minute to win it' ">
+                <div>Name: {{participant.name}}</div>
+                <div>Email: {{participant.email}}</div>
+                <div>Phone: {{participant.phone}}</div>
+                <div>College: {{participant.college}}</div>
+                <div>Course: {{participant.course}}</div>
+                <div>Year: {{participant.academic_year}}</div>
+                <div>Team: {{event.team}}</div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
